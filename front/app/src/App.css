@@ -1,0 +1,38 @@
+.row-container {
+  display: flex;                 /* Ativa o layout flex */
+  align-items: flex-start;      /* Alinha os itens no início da linha */
+  justify-content: center;       /* Centraliza os itens */
+  gap: 20px;                    /* Adiciona espaço entre os componentes */
+  margin: 0 auto;               /* Centraliza o contêiner na tela */
+  flex-wrap: wrap;              /* Permite que os itens quebrem para a próxima linha em telas menores */
+}
+
+.ColaboradoresTable {
+  flex: 1;                       /* Permite que a tabela utilize o espaço disponível */
+  max-width: 400px;             /* Define uma largura máxima para a tabela */
+  min-width: 300px;             /* Define uma largura mínima para a tabela em telas menores */
+}
+
+.Teste {
+  flex: 1;                       /* Permite que o componente Teste utilize o espaço disponível */
+  max-width: 400px;             /* Define uma largura máxima para o componente Teste */
+  min-width: 300px;             /* Define uma largura mínima para o componente Teste em telas menores */
+}
+
+.app-container {
+  text-align: center;            /* Centraliza o texto dentro do contêiner */
+}
+.app-container p {
+  color: rgb(8, 8, 8) !important; /* Especifica o estilo para <p> dentro de .app-container */
+}
+
+/* Media Queries para telas menores */
+@media (max-width: 600px) {
+  .row-container {
+    flex-direction: column;      /* Alinha os componentes em coluna em telas pequenas */
+    align-items: center;         /* Centraliza os itens na coluna */
+  }
+}
+.Cor-text {
+  color: rgb(8, 8, 8)!important; 
+}

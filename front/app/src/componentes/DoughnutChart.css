@@ -1,0 +1,30 @@
+/* src/componentes/DoughnutChart.css */
+.doughnut-chart-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    padding: 20px;
+  }
+  
+  .doughnut-chart-wrapper {
+    width: 100%;
+    max-width: 500px; /* Limita o tamanho máximo do gráfico */
+  }
+  
+  .doughnut-chart-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333; /* Cor do título */
+  }
+  
+  .doughnut-chart {
+    /* Esse estilo será aplicado ao componente <Doughnut> */
+    padding: 20px;
+    border: 1px solid #e0e0e0; /* Borda ao redor do gráfico */
+    border-radius: 10px; /* Arredondamento das bordas */
+    background-color: #f9f9f9; /* Cor de fundo */
+  }
+  

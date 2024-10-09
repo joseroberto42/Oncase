@@ -1,0 +1,92 @@
+/* Estilo para navbar */
+.navbar {
+    background-color: #54AEFF;
+    padding: 30px;
+    display: flex;
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    flex-wrap: wrap; /* Permite que os itens quebrem linha */
+}
+
+/* Estilo para o formulário */
+.colaborador-form {
+    display: flex;
+    flex-direction: row; /* Mantém os inputs em uma linha */
+    justify-content: center; /* Centraliza os inputs */
+    align-items: center; /* Centraliza verticalmente */
+    flex-wrap: wrap; /* Permite que os inputs quebrem linha em telas menores */
+    gap: 10px; /* Espaço entre os itens */
+}
+
+/* Estilo para os inputs */
+.colaborador-form input {
+    margin: 0 10px; /* Reduz a margem lateral */
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    width: 150px; /* Define uma largura fixa para os inputs */
+}
+
+/* Estilo para o botão */
+.colaborador-form button {
+    padding: 10px 30px;
+    border: 2px solid white; /* Borda branca */
+    border-radius: 4px;
+    background-color: transparent; /* Fundo transparente */
+    color: white; /* Texto branco */
+    font-weight: bold; /* Aumenta a espessura do texto */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Transição suave */
+}
+
+.colaborador-form button:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Fundo levemente branco ao passar o mouse */
+    color: #fff; /* Mantém o texto branco */
+}
+
+/* Estilo para a mensagem de erro */
+p {
+    color: #ff0000; /* Cor da mensagem de erro */
+}
+
+/* Media queries para ajustar o layout em telas menores */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 20px;
+        flex-direction: column; /* Coloca os itens em coluna em telas menores */
+        align-items: center;
+    }
+
+    .colaborador-form {
+        flex-direction: column; /* Coloca os inputs em coluna */
+        width: 100%;
+    }
+
+    .colaborador-form input {
+        width: 100%; /* Inputs ocupam 100% da largura */
+        margin: 10px 0; /* Margem superior e inferior para espaçamento */
+    }
+
+    .colaborador-form button {
+        width: 100%; /* Botão ocupa 100% da largura */
+        padding: 12px;
+    }
+}
+
+/* Media queries para dispositivos muito pequenos, como smartphones */
+@media (max-width: 480px) {
+    .navbar {
+        padding: 15px;
+    }
+
+    .colaborador-form input {
+        padding: 10px;
+        font-size: 14px; /* Reduz o tamanho da fonte */
+    }
+
+    .colaborador-form button {
+        padding: 10px;
+        font-size: 14px; /* Reduz o tamanho da fonte do botão */
+    }
+}
+/* Estilo para a mensagem de erro */
+

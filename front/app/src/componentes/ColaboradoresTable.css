@@ -1,0 +1,75 @@
+/* Estilo para a tabela de colaboradores */
+.colaboradores-table {
+    margin: 20px; /* Reduzido para aproximar outros elementos */
+    margin-top: 80px; /* Adicionado para aumentar a distância do topo */
+    padding: 20px; /* Reduzido para uma aparência mais compacta */
+    overflow-x: auto; /* Adiciona barra de rolagem horizontal se necessário */
+}
+
+/* Estilo para a tabela */
+table {
+    width: 100%; /* Ajustado para ocupar toda a largura disponível */
+    border-collapse: collapse; /* Remove espaços entre as bordas */
+}
+
+/* Estilo para cabeçalhos e células da tabela */
+th, td {
+    padding: 10px; /* Ajustado para aumentar a altura das células, se necessário */
+    text-align: left;
+    border: 1px solid #000; /* Borda simples para as células */
+    white-space: nowrap; /* Evita que o texto quebre linhas */
+}
+
+/* Estilo para o hover das linhas */
+tr:hover {
+    background-color: #f0f0f0; /* Efeito de hover mais sutil nas linhas */
+    transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
+}
+
+/* Media queries para telas menores que 600px */
+@media (max-width: 600px) {
+    /* Ajusta a tabela para que cada linha ocupe mais espaço vertical */
+    table {
+        width: 100%; /* Mantém a tabela com 100% da largura */
+    }
+
+    /* Define um estilo de exibição para melhorar a responsividade */
+    th, td {
+        display: block; /* Exibe cada célula como um bloco em telas menores */
+        width: 100%; /* As células ocupam toda a largura disponível */
+        text-align: right; /* Alinha o texto à direita para separação visual */
+        padding: 8px 10px; /* Ajusta o padding para telas menores */
+    }
+
+    /* Adiciona pseudo-elementos antes das células para identificar os campos */
+    th::before, td::before {
+        content: attr(data-label); /* Usa o atributo data-label para definir o título */
+        float: left; /* Alinha o título à esquerda */
+        font-weight: bold; /* Destaque para o título */
+        color: #333; /* Cor diferenciada */
+    }
+
+    /* Estilo para o cabeçalho da tabela */
+    th {
+        background-color: #54AEFF; /* Cor de fundo para destacar o cabeçalho */
+        color: white; /* Texto branco para o cabeçalho */
+    }
+
+    /* Adiciona uma margem para separar as células em telas menores */
+    tr {
+        margin-bottom: 15px; /* Espaço entre as linhas da tabela */
+        border-bottom: 2px solid #ddd; /* Borda inferior para separação visual */
+    }
+}
+
+/* Estilo para telas muito pequenas, como smartphones */
+@media (max-width: 400px) {
+    th, td {
+        padding: 6px 8px; /* Padding menor em telas muito pequenas */
+        font-size: 14px; /* Reduz o tamanho da fonte */
+    }
+
+    tr {
+        margin-bottom: 10px; /* Margem menor entre as linhas */
+    }
+}
