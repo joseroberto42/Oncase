@@ -1,6 +1,6 @@
 import './Config.css';
-import DeleteUser from '../.././componentes/DeleteColaborador';
-import EditUser from '../.././componentes/EditColaborador';
+import DeleteUser from '../../componentes/DeleteColaborador';
+import EditUser from '../../componentes/EditColaborador';
 import Navbar from '../../componentes/Navbar';
 import ColaboradoresTable from '../../componentes/ColaboradoresTable';
 

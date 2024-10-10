@@ -1,8 +1,8 @@
 import './Home.css';
-import AddColaborador from '../.././componentes/Addcolaborador';
-import ColaboradoresChart from '../.././componentes/ColaboradoresChart';
-import ColaboradoresTable from '../.././componentes/ColaboradoresTable';
-
+import AddColaborador from '../../componentes/Addcolaborador';
+import ColaboradoresChart from '../../componentes/ColaboradoresChart';
+import ColaboradoresTable from '../../componentes/ColaboradoresTable';
+import React from 'react';
 
 function Home() {
   return (

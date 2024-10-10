@@ -64,7 +64,7 @@ const AddColaborador = () => {
                     onChange={(e) => setPorcentagemContribuicao(e.target.value)}
                     required
                 />
-                <button type="submit">Enviar</button>
+                <button type="submit">Send</button>
                 <Link to="/Config/">
                     <button> Settings </button>
                 </Link>
