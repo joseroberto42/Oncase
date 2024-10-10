@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'colaboradores',
     'corsheaders',
+    'rest_framework_simplejwt',
 ]
 
 MIDDLEWARE = [

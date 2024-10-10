@@ -36,3 +36,11 @@
 .Cor-text {
   color: rgb(8, 8, 8)!important; 
 }
+.componentes_container {
+  display: flex;                 /* Ativa o layout flex */
+  align-items: flex-start;      /* Alinha os itens no início da linha */
+  justify-content: center;       /* Centraliza os itens */
+  gap: 20px;                    /* Adiciona espaço entre os componentes */
+  margin: 0 auto;               /* Centraliza o contêiner na tela */
+  flex-wrap: wrap;              /* Permite que os itens quebrem para a próxima linha em telas menores */
+}

@@ -44,9 +44,16 @@
 }
 
 /* Estilo para a mensagem de erro */
-p {
-    color: #ff0000; /* Cor da mensagem de erro */
+.success-message {
+    color: green;
+    margin-top: 10px;
 }
+
+.error-message {
+    color: red;
+    margin-top: 10px;
+}
+
 
 /* Media queries para ajustar o layout em telas menores */
 @media (max-width: 768px) {

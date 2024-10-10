@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './AddColaborador.css'; // Para os estilos
+import { Link } from 'react-router-dom';
 
-const AddColaborador = ({ onAddColaborador }) => { // Recebe a prop onAddColaborador
+const AddColaborador = () => {
     const [primeiroNome, setPrimeiroNome] = useState('');
     const [ultimoNome, setUltimoNome] = useState('');
     const [porcentagemContribuicao, setPorcentagemContribuicao] = useState('');
@@ -17,11 +18,6 @@ const AddColaborador = ({ onAddColaborador }) => { // Recebe a prop onAddColabor
                 ultimo_nome: ultimoNome,
                 porcentagem_contribuicao: porcentagemContribuicao
             });
-
-            const novoColaborador = response.data; // Supondo que a resposta contenha o colaborador adicionado
-            
-            // Chama a função de callback do componente pai
-            onAddColaborador(novoColaborador);
 
             // Limpa o formulário e exibe uma mensagem de sucesso
             setPrimeiroNome('');
@@ -49,14 +45,14 @@ const AddColaborador = ({ onAddColaborador }) => { // Recebe a prop onAddColabor
             <form onSubmit={handleSubmit} className="colaborador-form">
                 <input
                     type="text"
-                    placeholder="First name"
+                    placeholder="Firsh Nome"
                     value={primeiroNome}
                     onChange={handleNomeChange(setPrimeiroNome)}
                     required
                 />
                 <input
                     type="text"
-                    placeholder="Last name"
+                    placeholder="Last Name"
                     value={ultimoNome}
                     onChange={handleNomeChange(setUltimoNome)}
                     required
@@ -68,9 +64,13 @@ const AddColaborador = ({ onAddColaborador }) => { // Recebe a prop onAddColabor
                     onChange={(e) => setPorcentagemContribuicao(e.target.value)}
                     required
                 />
-                <button type="submit">Send</button>
+                <button type="submit">Enviar</button>
+                <Link to="/Config/">
+                    <button> Settings </button>
+                </Link>
             </form>
             {message && <p>{message}</p>}
+
         </div>
     );
 };

@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404
 from rest_framework import viewsets
 from rest_framework.response import Response
 from rest_framework import status
@@ -10,8 +10,8 @@ class ColaboradorViewSet(viewsets.ModelViewSet):
     """
     A viewset for viewing and editing colaborador instances.
     """
-    queryset = Colaborador.objects.all()  # Consulta para obter todos os colaboradores
-    serializer_class = ColaboradorSerializer  # Serializer a ser usado para a model Colaborador
+    queryset = Colaborador.objects.all()
+    serializer_class = ColaboradorSerializer
 
     def create(self, request, *args, **kwargs):
         """
@@ -20,26 +20,27 @@ class ColaboradorViewSet(viewsets.ModelViewSet):
         serializer = self.get_serializer(data=request.data)
         if serializer.is_valid():
             serializer.save()  # Salva o novo colaborador
-            return Response(serializer.data, status=status.HTTP_201_CREATED)  # Retorna os dados do colaborador criado
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)  # Retorna erros se houver
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)  # Erros de requisição
 
     def update(self, request, *args, **kwargs):
         """
         Atualiza um colaborador existente.
         """
-        partial = kwargs.pop('partial', False)  # Se a atualização é parcial
-        instance = self.get_object()  # Obtém a instância do colaborador
+        partial = kwargs.pop('partial', False)
+        instance = get_object_or_404(Colaborador, pk=kwargs['pk'])  # Obtenha o colaborador ou 404
         serializer = self.get_serializer(instance, data=request.data, partial=partial)
         if serializer.is_valid():
-            serializer.save()  # Salva as alterações
-            return Response(serializer.data)  # Retorna os dados atualizados
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)  # Retorna erros se houver
+            serializer.save()
+            return Response(serializer.data)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)  # Erros de requisição
 
     def destroy(self, request, *args, **kwargs):
         """
         Deleta um colaborador existente.
         """
-        instance = self.get_object()  # Obtém a instância do colaborador
-        instance.delete()  # Deleta o colaborador
-        return Response(status=status.HTTP_204_NO_CONTENT)  # Retorna um status 204 No Content
+        instance = get_object_or_404(Colaborador, pk=kwargs['pk'])  # Obtenha o colaborador ou 404
+        instance.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)  # Retorna 204 No Content
+
 

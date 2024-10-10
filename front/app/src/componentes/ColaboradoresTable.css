@@ -3,12 +3,14 @@
     margin: 20px; /* Reduzido para aproximar outros elementos */
     margin-top: 80px; /* Adicionado para aumentar a distância do topo */
     padding: 20px; /* Reduzido para uma aparência mais compacta */
+    display: flex;
+    justify-content: center; 
     overflow-x: auto; /* Adiciona barra de rolagem horizontal se necessário */
 }
 
 /* Estilo para a tabela */
 table {
-    width: 100%; /* Ajustado para ocupar toda a largura disponível */
+    width: 50%; /* Ajustado para ocupar toda a largura disponível */
     border-collapse: collapse; /* Remove espaços entre as bordas */
 }
 

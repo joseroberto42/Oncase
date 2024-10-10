@@ -1,0 +1,124 @@
+/* Navbar Styles */
+.navbar-container {
+    background-color: #54AEFF;
+    padding: 30px;
+    display: flex;
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    flex-wrap: wrap; /* Permite que os itens quebrem linha */
+}
+
+/* Estilo do botão Home */
+.home-button .home-icon-button {
+    background:none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin-right: 50px;
+    border: #f0f0f0;
+}
+
+
+/* Estilo da barra de pesquisa */
+.search-bar {
+    display: flex;
+    align-items: center;
+    position: relative; /* Necessário para posicionar sugestões */
+}
+
+.search-input {
+    width: 180px; /* Ajuste da largura do input */
+    padding: 8px 12px;
+    border: 2px solid white;
+    
+    outline: none;
+    font-size: 14px;
+}
+
+.search-button {
+    background-color: #2C73D2;
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 0 20px 20px 0; /* Bordas arredondadas */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Espaço entre ícone e texto */
+    font-size: 14px;
+    margin-left: 50px;
+}
+
+.search-button:hover {
+    background-color: #1E4A75;
+}
+
+/* Estilo das sugestões */
+.suggestions {
+    position: absolute;
+    top: 40px; /* Distância do campo de input */
+    left: 0;
+    width: 100%;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 0 0 10px 10px; /* Bordas arredondadas na parte inferior */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Mantém as sugestões acima dos outros elementos */
+}
+
+.suggestions ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.suggestions li {
+    padding: 8px 12px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.suggestions li:hover {
+    background-color: #f0f0f0;
+}
+
+/* Mensagem de erro ou sucesso */
+.message {
+    margin-top: 10px;
+    color: white;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .navbar-container {
+        flex-wrap: wrap; /* Permite a quebra de linha para o conteúdo */
+        padding: 10px 15px; /* Reduz o padding */
+    }
+
+    .search-input {
+        width: 140px; /* Reduz a largura do input */
+    }
+
+    .search-button {
+        padding: 8px 10px; /* Ajuste no padding do botão */
+    }
+
+    .suggestions {
+        width: 100%; /* Sugestões ocupam 100% da largura do input */
+    }
+}
+
+@media (max-width: 480px) {
+    .search-input {
+        width: 120px; /* Reduz ainda mais a largura do input */
+    }
+
+    .search-bar {
+        justify-content: center;
+    }
+
+    .home-button {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}
